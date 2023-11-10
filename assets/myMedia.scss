@@ -1,0 +1,50 @@
+@media (max-width:576px) {
+  .navbar-brand, .circleIcons {
+    width: 50%;
+  }
+}
+@media  (max-width:768px) {
+  .headerRotatingAnimation, .headerScaleAnimation {
+    display: none;
+  }
+  .counterBox {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+}
+@media (min-width:992px) {
+  .bgSpecial {
+    background-color: $colorSpecial;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  }
+  .counterBox {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+
+    .counterBoxImage {
+      width: 200px;
+      height: 200px;
+    }
+    .counterBoxInfo {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .bookingContainer {
+    .booking {
+      clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%);
+      .formBox {
+        margin-left: 80px;
+      }
+    }
+  }
+  .foodMenu {
+    .menuOptionsButtons {
+      justify-content:end;
+    }
+  }
+  .downloadButtons {
+      flex-direction: column;
+  }
+}

@@ -1,0 +1,953 @@
+@charset "UTF-8";
+body {
+  color: #231f40;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 15px 0;
+}
+
+p, div {
+  font-family: "Manrope", sans-serif;
+}
+
+h1, h2, h5, h6 {
+  font-family: "Barlow", sans-serif;
+}
+
+h3, h4 {
+  font-family: "Oleo Script", cursive;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ff7c08;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.g10 {
+  gap: 10px;
+}
+
+.circleIcons i {
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  background-color: #ff7c08;
+  color: #ffffff;
+}
+.circleIcons .fa-arrow-left:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #231f40;
+}
+.circleIcons .fa-arrow-right {
+  background-color: #231f40;
+  color: #ffffff;
+}
+
+.discountCircle {
+  background-color: #ff7c08;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 4px solid #ffffff;
+  font-family: "Oleo Script", cursive;
+  border-radius: 50%;
+  letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+}
+
+.stars {
+  color: #ff7c08;
+  display: flex;
+  align-items: center;
+}
+
+.topBar {
+  background-color: #231f40;
+  color: #ffffff;
+  height: 50px;
+  font-size: 16px;
+}
+.topBar .bgSpecial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topBar .circleIcons i {
+  width: 30px;
+  height: 30px;
+  background-color: #ff7c08;
+  color: #ffffff;
+}
+.topBar .circleIcons i:hover {
+  color: #ff7c08;
+  background-color: #ffffff;
+}
+.topBar .topBarContact:hover {
+  transition: 0.5s ease-in-out;
+  color: #484747;
+}
+
+.nav {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav nav {
+  height: 80px;
+}
+.nav nav .navbar-brand img {
+  max-height: 70px;
+  width: 100%;
+}
+.nav nav .navbar-toggler {
+  background-color: #ff7c08;
+}
+.nav nav .nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+}
+.nav nav .nav-item:hover {
+  border-bottom: 2px solid #ff7c08;
+}
+.nav nav .nav-item:hover .nav-link {
+  color: #ff7c08;
+  transition: 0.5s ease-in-out;
+}
+.nav nav .circleIcons i {
+  background-color: rgba(255, 124, 8, 0.1490196078);
+  color: #231f40;
+}
+.nav nav .circleIcons i:hover {
+  background-color: #ff7c08;
+  color: #ffffff;
+  transition: 0.5s ease-in-out;
+}
+.nav nav .circleIcons .smallIcon {
+  background-color: #ff7c08;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  right: -5px;
+  top: -5px;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443978) 100%, rgba(255, 124, 8, 0.7737219888) 100%), url("../images/banner_bg.jpg");
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+}
+header h3 {
+  color: #ff7c08;
+  letter-spacing: 1px;
+}
+header .headerRight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .headerRight .headerRotatingShape {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 90%;
+  animation: rotating 10s linear infinite;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header .headerRight .headerImg {
+  border-radius: 50%;
+  width: 95%;
+  z-index: 3;
+  position: relative;
+}
+header .headerRight .headerDiscountCircle {
+  font-size: 35px;
+  top: 20px;
+  left: 20px;
+  width: 180px;
+  height: 180px;
+  line-height: 25px;
+  z-index: 5;
+}
+header form {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 50px;
+  position: relative;
+}
+header form input {
+  border-radius: 50px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+header form button {
+  border-radius: 50px;
+  background-color: #ff7c08;
+  color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  padding: 15px 40px;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+header form button:hover {
+  background-color: #231f40;
+}
+header .headerRotatingAnimation {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  animation: rotating 10s linear infinite;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header .headerTomatoImg {
+  background-image: url("../images/tree_5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 100px;
+  left: 10px;
+}
+header .headerLeafImg {
+  background-image: url("../images/tree_7.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 50%;
+  bottom: 30px;
+}
+header .headerScaleAnimation {
+  position: absolute;
+  animation: scaling 3s linear alternate infinite;
+}
+@keyframes scaling {
+  from {
+    transform: scale(80%);
+  }
+  to {
+    transform: scale(110%);
+  }
+}
+header .headerTree1 {
+  background-image: url("../images/tree_4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 40px;
+  left: 500px;
+  width: 70px;
+  height: 70px;
+}
+header .headerTree2 {
+  background-image: url("../images/tree_3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 350px;
+  left: 20px;
+  width: 110px;
+  height: 80px;
+}
+
+.dailyOffer {
+  background-color: #EEF6EB;
+}
+.dailyOffer .spoonImg {
+  width: 65px;
+  height: 100%;
+}
+.dailyOffer .dailyOfferCard {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+.dailyOffer .card1 {
+  background-image: url("../images/offer_item_img1.jpg");
+}
+.dailyOffer .card2 {
+  background-image: url("../images/offer_item_img3.jpg");
+}
+.dailyOffer .dailyOfferDiscountCircle {
+  width: 80px;
+  height: 80px;
+  top: -80px;
+  left: 20px;
+}
+.dailyOffer h5:hover {
+  transition: 0.5s ease-in-out;
+  color: #ff7c08;
+}
+.dailyOffer .circleIcons i:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #231f40;
+}
+
+.bookingContainer {
+  border-radius: 10px;
+  background-image: url("../images/reservation_bg.jpg");
+}
+.bookingContainer .booking {
+  background-image: linear-gradient(180deg, rgba(255, 124, 8, 0.7737219888) 100%, rgba(25, 38, 133, 0.4824054622) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 40px;
+}
+.bookingContainer .booking h2 {
+  border-bottom: 2px solid #ffffff;
+}
+.bookingContainer .booking input, .bookingContainer .booking select, .bookingContainer .booking button {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+.bookingContainer .booking button {
+  background-color: #231f40;
+  color: #ffffff;
+  width: 100%;
+}
+
+.foodMenu {
+  background: radial-gradient(circle, rgba(255, 124, 8, 0.4066001401) 0%, rgba(0, 0, 0, 0) 83%);
+}
+.foodMenu .menuOptionsButtons {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.foodMenu .menuOptionsButtons div {
+  border: 1px solid #ff7c08;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  color: #ff7c08;
+  transition: 0.5s ease-in-out;
+  font-size: 15px;
+}
+.foodMenu .menuOptionsButtons div:hover {
+  background-color: #ff7c08;
+  color: #ffffff;
+}
+.foodMenu .menuCard {
+  background-color: #ffffff;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
+}
+.foodMenu .menuCard img {
+  border-radius: 5px 5px 0 0;
+}
+.foodMenu .menuCard .menuCardInfo {
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.foodMenu .menuCard .menuCardInfo h6 {
+  transition: 0.5s ease-in-out;
+}
+.foodMenu .menuCard .menuCardInfo h6:hover {
+  color: #ff7c08;
+}
+.foodMenu .menuCard .menuCardInfo h5 {
+  color: #ff7c08;
+}
+.foodMenu .menuCard .menuCardInfo span {
+  text-decoration: line-through;
+  color: #231f40;
+  font-size: 16px;
+}
+.foodMenu .menuCard .menuCardIcons {
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.foodMenu .menuCard .menuCardIcons i {
+  border: 1px solid #ff7c08;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ff7c08;
+  transition: 0.5s ease-in-out;
+}
+.foodMenu .menuCard .menuCardIcons i:hover {
+  background-color: #ff7c08;
+  color: #ffffff;
+}
+.foodMenu .menuCard .menuCardIcons .addToCartLabel {
+  position: absolute;
+  background-color: #ff7c08;
+  color: #ffffff;
+  padding: 5px 10px;
+  left: -10px;
+  top: 25px;
+  border-radius: 0 5px 5px 0;
+  transition: 0.5s ease-in-out;
+}
+.foodMenu .menuCard .menuCardIcons .addToCartLabelTriangle {
+  position: absolute;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+  background-color: #bb6004;
+  width: 10px;
+  height: 15px;
+  left: -10px;
+  top: 10px;
+  transition: 0.5s ease-in-out;
+}
+.foodMenu .menuCard .menuCardIcons .addToCartLabel:hover, .foodMenu .menuCard .menuCardIcons .addToCartLabelTriangle:hover {
+  background-color: #231f40;
+}
+.foodMenu .menuCard .menuCardLabel {
+  position: absolute;
+  background-color: #ff7c08;
+  color: #ffffff;
+  border-radius: 5px 0 0 5px;
+  padding: 5px 10px;
+  right: 0;
+  bottom: -15px;
+  transition: 0.5s ease-in-out;
+}
+.foodMenu .menuCard .menuCardLabel h4 {
+  font-size: 16px;
+}
+.foodMenu .menuCard .menuCardLabel:hover {
+  color: #231f40;
+}
+.foodMenu .menuCard:hover {
+  transform: translateY(-10px);
+}
+
+.ourTeam {
+  background-color: #EEF6EB;
+}
+.ourTeam .spoonImg {
+  width: 65px;
+  height: 100%;
+}
+.ourTeam .teamMemberCard {
+  border-radius: 10px;
+  padding-left: 0;
+  padding-right: 10px;
+  background-color: #ffffff;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.ourTeam .teamMemberCardBackground {
+  border-radius: 10px;
+  background: #ff7c08;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0%, 100% 25%, 50% 100%, 0 25%);
+}
+.ourTeam .member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.ourTeam .member .memberImgDiv {
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+  width: 50%;
+}
+.ourTeam .member .memberImg {
+  border-radius: 50%;
+  border: 8px solid #ff7c08;
+}
+.ourTeam .member .memberImg img {
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+.ourTeam .member .memberInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourTeam .member .circleIcons i {
+  background-color: rgba(255, 124, 8, 0.1490196078);
+  color: #ff7c08;
+}
+.ourTeam .member .circleIcons i:hover {
+  background-color: #ff7c08;
+  color: #ffffff;
+  transition: 0.5s ease-in-out;
+}
+.ourTeam h5 {
+  transition: 0.5s ease-in-out;
+}
+.ourTeam .teamMemberCard:hover {
+  transform: translateY(-10px);
+}
+.ourTeam .teamMemberCard:hover h5 {
+  color: #ff7c08;
+}
+.ourTeam .teamMemberCard:hover .memberImg img {
+  transform: scale(110%);
+}
+
+.offers .offerCard {
+  margin: 10px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.offers .offerCard h4 {
+  color: #ff7c08;
+  font-size: 20px;
+}
+.offers .offerCard h2 {
+  font-size: 28px;
+}
+.offers .offerCard p {
+  font-size: 16px;
+}
+.offers .offerCard a {
+  color: #231f40;
+  font-weight: bold;
+  border-bottom: 1px solid #231f40;
+  transition: 0.5s ease-in-out;
+}
+.offers .offerCard a:hover {
+  color: #ff7c08;
+  border-bottom: 1px solid #ff7c08;
+}
+.offers .offerCard1 {
+  background-image: url("../images/offer_slider_1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.offers .offerCard2 {
+  background-image: url("../images/offer_slider_2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.download {
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443978) 100%, rgba(255, 124, 8, 0.7737219888) 100%), url("../images/download_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.download h2 {
+  color: #ffffff;
+}
+.download a {
+  transition: 0.5s ease-in-out;
+  background-color: #ff7c08;
+  color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+}
+.download a:hover {
+  background-color: red;
+}
+
+.downloadImg {
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonials {
+  background-image: url("../images/testimonial_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.testimonials .orangeBox {
+  background-color: #ff7c08;
+  width: 50%;
+  height: 80%;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+}
+.testimonials .darkBox {
+  background-color: #231f40;
+  z-index: -1;
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  border-radius: 20px;
+  top: 25%;
+}
+.testimonials .quote {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.testimonials .leftQuote {
+  right: 200px;
+  top: 10px;
+}
+.testimonials .rightQuote {
+  left: 200px;
+  transform: rotate(180deg);
+}
+.testimonials h5 {
+  margin-top: 20px;
+}
+.testimonials .reviewCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  border-radius: 20px;
+  padding: 40px 20px;
+  color: #ffffff;
+}
+.testimonials .reviewCard .reviewImg {
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  width: 20%;
+}
+.testimonials .reviewCard .reviewImg img {
+  border-radius: 50%;
+}
+
+.counter {
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443978) 100%, rgba(255, 124, 8, 0.7737219888) 100%), url("../images/counter_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.counterBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.counterBox .counterBoxCard {
+  padding: 30px 0;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.counterBox .counterBoxImage {
+  width: 240px;
+  height: 240px;
+  animation: rotating 10s linear infinite;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.counterBox .counterBoxInfo {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  height: 240px;
+}
+.counterBox .counterBoxInfo h2, .counterBox .counterBoxInfo .circleIcons {
+  align-self: center;
+  justify-self: center;
+}
+.counterBox p {
+  font-weight: bold;
+}
+
+.blogs {
+  background: radial-gradient(circle, rgba(255, 124, 8, 0.4066001401) 0%, rgba(0, 0, 0, 0) 83%);
+}
+.blogs .blogCard {
+  padding: 10px;
+  background-color: #f1efef;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
+}
+.blogs .blogCard img {
+  border-radius: 5px;
+}
+.blogs .blogCard .blogCardInfo {
+  padding: 20px;
+}
+.blogs .blogCard .blogCardInfo hr {
+  border: 1px solid #ff7c08;
+}
+.blogs .blogCard .blogCardInfo img {
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  width: 60PX;
+}
+.blogs .blogCard .blogCardInfo h6 {
+  font-size: 17px;
+}
+.blogs .blogCard .blogCardInfo span {
+  font-size: 15px;
+  color: #ff7c08;
+}
+.blogs .blogCard .blogCardInfo h5 {
+  transition: 0.5s ease-in-out;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.blogs .blogCard .blogCardInfo p {
+  font-size: 16px;
+}
+.blogs .blogCard .blogCardInfo h5:hover {
+  color: #ff7c08;
+}
+.blogs .blogCard .blogCardIcons {
+  display: flex;
+  justify-content: space-between;
+}
+.blogs .blogCard .blogCardIcons a {
+  color: #231f40;
+  transition: 0.5s ease-in-out;
+}
+.blogs .blogCard .blogCardIcons a i {
+  color: #231f40;
+  transition: 0.5s ease-in-out;
+}
+.blogs .blogCard .blogCardIcons a:hover {
+  color: #ff7c08;
+}
+.blogs .blogCard .blogCardIcons a:hover i {
+  color: #ff7c08;
+}
+.blogs .blogCard .blogCardIcons i, .blogs .blogCard .blogCardIcons p {
+  color: #ff7c08;
+}
+.blogs .blogCard .blogCardLabel {
+  position: absolute;
+  background-color: #ff7c08;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  right: 10px;
+  bottom: -15px;
+  transition: 0.5s ease-in-out;
+}
+.blogs .blogCard .blogCardLabel h4 {
+  font-size: 16px;
+}
+.blogs .blogCard .blogCardLabel:hover {
+  color: #231f40;
+}
+.blogs .blogCard:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443978) 100%, rgba(255, 124, 8, 0.7737219888) 100%), url("../images/footer_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+footer img {
+  width: 50%;
+}
+footer .circleIcons i:hover {
+  color: #ff7c08;
+  background-color: #ffffff;
+}
+footer p {
+  font-size: 16px;
+}
+footer h5, footer .footerLine {
+  border-bottom: 1px solid #ff7c08;
+  padding: 10px 0;
+}
+footer ul {
+  list-style: none;
+  padding: 20px 0;
+}
+footer li::before {
+  content: "■";
+  color: #ff7c08;
+  margin-right: 10px;
+}
+footer .footerLine {
+  align-items: center;
+  gap: 10px;
+}
+footer .footerLine i {
+  color: #ff7c08;
+}
+
+.pageEnd {
+  background-color: #ff7c08;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+.pageEnd p {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+.pageEnd .circleIcons {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  animation: pointing 3s linear alternate infinite;
+}
+.pageEnd .circleIcons i {
+  border: 1px solid #ffffff;
+  transition: 0.5s ease-in-out;
+}
+.pageEnd .circleIcons i:hover {
+  background-color: #231f40;
+}
+@keyframes pointing {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand, .circleIcons {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .headerRotatingAnimation, .headerScaleAnimation {
+    display: none;
+  }
+  .counterBox {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .bgSpecial {
+    background-color: #ff7c08;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  }
+  .counterBox {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .counterBox .counterBoxImage {
+    width: 200px;
+    height: 200px;
+  }
+  .counterBox .counterBoxInfo {
+    width: 200px;
+    height: 200px;
+  }
+  .bookingContainer .booking {
+    clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .bookingContainer .booking .formBox {
+    margin-left: 80px;
+  }
+  .foodMenu .menuOptionsButtons {
+    justify-content: end;
+  }
+  .downloadButtons {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,922 @@
+@import 'myVariables.scss';
+@import 'myMixins.scss';
+
+///////general page css////////
+
+body {
+  color: $colorBlack;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 15px 0;
+}
+
+p, div {
+  font-family: $font1;
+}
+
+h1, h2, h5, h6 {
+  font-family: $font2;
+}
+
+h3, h4 {
+  font-family: $font3;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: $colorSpecial;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.g10 {
+  gap: 10px;
+}
+
+/////////page sections css/////////
+
+.circleIcons {
+  i {
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    @include centeredItem;
+    @include transitionEaseInOut;
+    @include bgSpecialTextWhite;
+  }
+
+  .fa-arrow-left:hover {
+    @include transitionEaseInOut;
+    background-color: $colorBlack;
+  }
+
+  .fa-arrow-right {
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
+}
+
+.discountCircle {
+  @include bgSpecialTextWhite;
+  @include centeredItem;
+  position: absolute;
+  border: 4px solid $colorWhite;
+  font-family: $font3;
+  border-radius: 50%;
+  letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+}
+
+.stars {
+  color: $colorSpecial;
+  display: flex;
+  align-items: center;
+}
+
+.topBar {
+  background-color: $colorBlack;
+  color: $colorWhite;
+  height: 50px;
+  font-size: 16px;
+  .bgSpecial {
+    @include centeredItem;
+  }
+  .circleIcons {
+    i {
+      width: 30px;
+      height: 30px;
+      @include bgSpecialTextWhite;
+    }
+
+    i:hover {
+      color: $colorSpecial;
+      background-color: $colorWhite;
+    }
+  }
+
+  .topBarContact:hover {
+    @include transitionEaseInOut;
+    color: $colorDark;
+  }
+}
+
+.nav {
+  background-color: $colorWhite;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  nav {
+    height: 80px;
+    .navbar-brand {
+      img{
+        max-height: 70px;
+        width:100%;
+      }
+    }
+    .navbar-toggler {
+      background-color: $colorSpecial;
+    }
+    .nav-item {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border: 2px solid white;
+    }
+    .nav-item:hover {
+      border-bottom: 2px solid $colorSpecial;
+      .nav-link {
+        color: $colorSpecial;
+        @include transitionEaseInOut;
+      }
+    }
+
+    .circleIcons {
+      i {
+        background-color: $colorLighterSpecial;
+        color: $colorBlack;
+      }
+
+      i:hover {
+        @include bgSpecialTextWhite;
+        @include transitionEaseInOut;
+      }
+
+      .smallIcon {
+        @include bgSpecialTextWhite;
+        border-radius: 50%;
+        padding: 2px;
+        margin: 5px;
+        width: 25px;
+        height: 25px;
+        @include centeredItem;
+        font-size: 12px;
+        right: -5px;
+        top: -5px;
+      }
+    }
+  }
+}
+
+header {
+  @include bgImage;
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443977591037) 100%, rgba(255, 124, 8, 0.7737219887955182) 100%), url("../images/banner_bg.jpg");
+  color: $colorWhite;
+  font-weight: bold;
+  position: relative;
+
+  h3 {
+    color: $colorSpecial;
+    letter-spacing: 1px;
+  }
+
+  .headerRight {
+    position: relative;
+    @include centeredItem;
+
+    .headerRotatingShape {
+      position: absolute;
+      @include centeredItem;
+      border-radius:50%;
+      width:90%;
+
+      @include rotatingAnimation;
+    }
+    .headerImg {
+      border-radius: 50%;
+      width:95%;
+      z-index:3;
+      position:relative;
+    }
+
+    .headerDiscountCircle {
+      font-size: 35px;
+      top: 20px;
+      left: 20px;
+      width: 180px;
+      height: 180px;
+      line-height: 25px;
+      z-index:5;
+    }
+  }
+
+  form {
+    background-color: $colorWhite;
+    padding: 10px;
+    border-radius: 50px;
+    position: relative;
+
+    input {
+      border-radius: 50px;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      border-radius: 50px;
+      @include bgSpecialTextWhite;
+      position: absolute;
+      right: 20px;
+      top: 17px;
+      padding: 15px 40px;
+      border: none;
+      @include transitionEaseInOut;
+    }
+
+    button:hover {
+      background-color: $colorBlack;
+    }
+  }
+
+  .headerRotatingAnimation {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    @include rotatingAnimation;
+    //display:none;
+  }
+
+  .headerTomatoImg {
+    background-image: url("../images/tree_5.png");
+    @include bgImage;
+    top: 100px;
+    left: 10px;
+  }
+
+  .headerLeafImg {
+    background-image: url("../images/tree_7.png");
+    @include bgImage;
+    right: 50%;
+    bottom: 30px;
+  }
+
+  .headerScaleAnimation {
+    position: absolute;
+    @include scaleAnimation;
+  }
+
+  .headerTree1 {
+    background-image: url("../images/tree_4.png");
+    @include bgImage;
+    top: 40px;
+    left: 500px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .headerTree2 {
+    background-image: url("../images/tree_3.png");
+    @include bgImage;
+    top: 350px;
+    left: 20px;
+    width: 110px;
+    height: 80px;
+  }
+}
+
+.dailyOffer {
+  background-color: $colorBgLightLime;
+
+  .spoonImg {
+    width: 65px;
+    height: 100%;
+  }
+
+  .dailyOfferCard {
+    @include bgImage;
+    height: 250px;
+  }
+
+  .card1 {
+    background-image: url("../images/offer_item_img1.jpg");
+  }
+
+  .card2 {
+    background-image: url("../images/offer_item_img3.jpg");
+  }
+
+  .dailyOfferDiscountCircle {
+    width: 80px;
+    height: 80px;
+    top: -80px;
+    left: 20px;
+  }
+
+  h5:hover {
+    @include transitionEaseInOut;
+    color: $colorSpecial;
+  }
+
+  .circleIcons {
+    i:hover {
+      @include transitionEaseInOut;
+      background-color: $colorBlack;
+    }
+  }
+}
+
+.bookingContainer {
+  border-radius: 10px;
+  background-image: url("../images/reservation_bg.jpg");
+
+  .booking {
+    background-image: linear-gradient(180deg, rgba(255, 124, 8, 0.7737219887955182) 100%, rgba(25, 38, 133, 0.4824054621848739) 100%);
+    @include bgImage;
+    border-radius: 10px;
+    color: $colorWhite;
+    padding: 40px;
+
+    h2 {
+      border-bottom: 2px solid $colorWhite;
+    }
+
+    input, select, button {
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+    }
+
+    button {
+      background-color: $colorBlack;
+      color: $colorWhite;
+      width: 100%;
+    }
+  }
+}
+
+.foodMenu {
+  background: radial-gradient(circle, rgba(255, 124, 8, 0.4066001400560224) 0%, rgba(0, 0, 0, 0) 83%);
+
+  .menuOptionsButtons {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    div {
+      border: 1px solid $colorSpecial;
+      border-radius: 5px;
+      margin: 0 5px;
+      padding: 5px 10px;
+      color: $colorSpecial;
+      @include transitionEaseInOut;
+      font-size: 15px;
+    }
+
+    div:hover {
+      @include bgSpecialTextWhite;
+    }
+  }
+
+  .menuCard {
+    background-color: $colorWhite;
+    border-radius: 5px;
+    @include transitionEaseInOut;
+    box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .menuCardInfo {
+      padding: 20px;
+      background-color: $colorWhite;
+      @include alignItemsCenterColumn;
+      justify-content: center;
+
+      h6 {
+        @include transitionEaseInOut;
+      }
+
+      h6:hover {
+        color: $colorSpecial;
+      }
+
+      h5 {
+        color: $colorSpecial;
+      }
+
+      span {
+        text-decoration: line-through;
+        color: $colorBlack;
+        font-size: 16px;
+      }
+    }
+
+    .menuCardIcons {
+      padding: 20px;
+      display: flex;
+      justify-content: end;
+      position: relative;
+
+      i {
+        border: 1px solid $colorSpecial;
+        border-radius: 5px;
+        padding: 10px;
+        color: $colorSpecial;
+        @include transitionEaseInOut;
+      }
+
+      i:hover {
+        @include bgSpecialTextWhite;
+      }
+
+      .addToCartLabel {
+        position: absolute;
+        @include bgSpecialTextWhite;
+        padding: 5px 10px;
+        left: -10px;
+        top: 25px;
+        border-radius: 0 5px 5px 0;
+        @include transitionEaseInOut;
+      }
+
+      .addToCartLabelTriangle {
+        position: absolute;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+        background-color: #bb6004;
+        width: 10px;
+        height: 15px;
+        left: -10px;
+        top: 10px;
+        @include transitionEaseInOut;
+      }
+
+      .addToCartLabel:hover, .addToCartLabelTriangle:hover {
+        background-color: $colorBlack;
+      }
+    }
+
+    .menuCardLabel {
+      position: absolute;
+      @include bgSpecialTextWhite;
+      border-radius: 5px 0 0 5px;
+      padding: 5px 10px;
+      right: 0;
+      bottom: -15px;
+      @include transitionEaseInOut;
+
+      h4 {
+        font-size: 16px;
+      }
+    }
+
+    .menuCardLabel:hover {
+      color: $colorBlack;
+    }
+  }
+
+  .menuCard:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.ourTeam {
+  background-color: $colorBgLightLime;
+
+  .spoonImg {
+    width: 65px;
+    height: 100%;
+  }
+
+  .teamMemberCard {
+    border-radius: 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    background-color: $colorWhite;
+    position: relative;
+    @include transitionEaseInOut;
+  }
+
+  .teamMemberCardBackground {
+    border-radius: 10px;
+    background: $colorSpecial;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 25%, 50% 100%, 0 25%)
+  }
+
+  .member {
+    @include alignItemsCenterColumn;
+    padding: 10px;
+
+    .memberImgDiv {
+      border: 8px solid $colorWhite;
+      border-radius: 50%;
+      z-index: 2;
+      width: 50%;
+    }
+
+    .memberImg {
+      border-radius: 50%;
+      border: 8px solid $colorSpecial;
+
+      img {
+        border-radius: 50%;
+        @include transitionEaseInOut;
+      }
+    }
+
+    .memberInfo {
+      @include alignItemsCenterColumn;
+    }
+
+    .circleIcons {
+      i {
+        background-color: $colorLighterSpecial;
+        color: $colorSpecial;
+      }
+
+      i:hover {
+        @include bgSpecialTextWhite;
+        @include transitionEaseInOut;
+      }
+    }
+  }
+
+  h5 {
+    @include transitionEaseInOut;
+  }
+
+  .teamMemberCard:hover {
+    transform: translateY(-10px);
+
+    h5 {
+      color: $colorSpecial;
+    }
+
+    .memberImg {
+      img {
+        transform: scale(110%);
+      }
+    }
+  }
+}
+
+.offers {
+  .offerCard {
+    margin: 10px;
+    padding: 30px;
+    border-radius: 10px;
+
+    h4 {
+      color: $colorSpecial;
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    a {
+      color: $colorBlack;
+      font-weight: bold;
+      border-bottom: 1px solid $colorBlack;
+      @include transitionEaseInOut;
+    }
+
+    a:hover {
+      color: $colorSpecial;
+      border-bottom: 1px solid $colorSpecial;
+    }
+  }
+
+  .offerCard1 {
+    background-image: url("../images/offer_slider_1.png");
+    @include bgImage;
+  }
+
+  .offerCard2 {
+    background-image: url("../images/offer_slider_2.png");
+    @include bgImage;
+  }
+}
+
+.download {
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443977591037) 100%, rgba(255, 124, 8, 0.7737219887955182) 100%), url("../images/download_img.png");
+  @include bgImage;
+  height: 100%;
+  @include centeredItem;
+  flex-direction: column;
+  h2 {
+    color: $colorWhite;
+  }
+  a {
+    @include transitionEaseInOut;
+    @include bgSpecialTextWhite;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    gap:10px;
+    padding:10px;
+  }
+  a:hover{
+    background-color: red;
+  }
+}
+
+.downloadImg {
+  max-height:400px;
+  @include centeredItem;
+  overflow:hidden;
+}
+
+.testimonials {
+  background-image: url("../images/testimonial_bg.jpg");
+  @include bgImage;
+  height: 100%;
+
+  .orangeBox {
+    background-color: $colorSpecial;
+    width: 50%;
+    height: 80%;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+  }
+
+  .darkBox {
+    background-color: $colorBlack;
+    z-index: -1;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    border-radius: 20px;
+    top: 25%;
+  }
+  .quote {
+    position: absolute;
+    width:40px;
+    height:40px;
+  }
+  .leftQuote {
+    right: 200px;
+    top:10px;
+  }
+  .rightQuote {
+    left:200px;
+    transform: rotate(180deg);
+  }
+  h5 {
+    margin-top: 20px;
+  }
+  .reviewCard {
+    @include alignItemsCenterColumn;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    border-radius: 20px;
+    padding: 40px 20px;
+    color: $colorWhite;
+
+    .reviewImg {
+      border: 5px solid $colorWhite;
+      border-radius: 50%;
+      width: 20%;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.counter {
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443977591037) 100%, rgba(255, 124, 8, 0.7737219887955182) 100%), url("../images/counter_bg.jpg");
+  @include bgImage;
+}
+
+.counterBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  .counterBoxCard {
+    padding: 30px 0;
+    color: $colorWhite;
+    text-align: center;
+    @include centeredItem;
+    flex-direction: column;
+  }
+
+  .counterBoxImage {
+    width: 240px;
+    height: 240px;
+    @include rotatingAnimation;
+  }
+
+  .counterBoxInfo {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    position: relative;
+    z-index: 2;
+    width: 240px;
+    height: 240px;
+
+    h2, .circleIcons {
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  p {
+    font-weight: bold;
+  }
+}
+
+.blogs {
+  background: radial-gradient(circle, rgba(255, 124, 8, 0.4066001400560224) 0%, rgba(0, 0, 0, 0) 83%);
+  .blogCard {
+    padding:10px;
+    background-color: #f1efef;
+    border-radius: 5px;
+    @include transitionEaseInOut;
+    box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
+    img {
+      border-radius: 5px;
+    }
+
+    .blogCardInfo {
+      padding: 20px;
+      hr {
+        border:1px solid $colorSpecial;
+      }
+      img {
+        border-radius: 50%;
+        border:5px solid $colorWhite;
+        width:60PX;
+      }
+      h6 {
+        font-size: 17px;
+      }
+      span {
+        font-size: 15px;
+        color: $colorSpecial;
+      }
+      h5 {
+        @include transitionEaseInOut;
+        font-size: 22px;
+        margin-top:10px;
+      }
+      p {
+        font-size: 16px;
+      }
+      h5:hover {
+        color: $colorSpecial;
+      }
+    }
+    .blogCardIcons {
+      display: flex;
+      justify-content: space-between;
+      a {
+        color:$colorBlack;
+        @include transitionEaseInOut;
+        i {
+          color:$colorBlack;
+          @include transitionEaseInOut;
+        }
+      }
+      a:hover {
+        color: $colorSpecial;
+        i {
+          color:$colorSpecial;
+        }
+      }
+      i,p {
+        color: $colorSpecial;
+      }
+    }
+    .blogCardLabel {
+      position: absolute;
+      @include bgSpecialTextWhite;
+      border-radius: 5px;
+      padding: 5px 10px;
+      right: 10px;
+      bottom: -15px;
+      @include transitionEaseInOut;
+      h4 {
+        font-size: 16px;
+      }
+    }
+    .blogCardLabel:hover {
+      color: $colorBlack;
+    }
+  }
+  .blogCard:hover {
+    transform: translateY(-10px);
+  }
+}
+
+footer {
+  background-image: linear-gradient(180deg, rgba(35, 31, 64, 0.8297443977591037) 100%, rgba(255, 124, 8, 0.7737219887955182) 100%), url("../images/footer_bg.jpg");
+  @include bgImage;
+  color: $colorWhite;
+  img {
+    width: 50%;
+  }
+  .circleIcons {
+    i:hover {
+      color: $colorSpecial;
+      background-color: $colorWhite;
+    }
+  }
+  p {
+    font-size: 16px;
+  }
+  h5, .footerLine {
+    border-bottom: 1px solid $colorSpecial;
+    padding: 10px 0;
+  }
+  ul {
+    list-style: none;
+    padding: 20px 0;
+  }
+  li::before {
+    content: '■';
+    color: $colorSpecial;
+    margin-right: 10px;
+  }
+  .footerLine {
+    align-items: center;
+    gap:10px;
+    i {
+      color: $colorSpecial;
+    }
+  }
+}
+
+.pageEnd {
+  background-color: $colorSpecial;
+  text-align: center;
+  color: $colorWhite;
+  position: relative;
+
+  p {
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .circleIcons {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+
+    i {
+      border: 1px solid $colorWhite;
+      @include transitionEaseInOut;
+    }
+    i:hover {
+      background-color: $colorBlack;
+    }
+
+    animation: pointing 3s linear alternate infinite;
+    @keyframes pointing {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-20px);
+      }
+    }
+  }
+}
+@import 'myMedia.scss';

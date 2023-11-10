@@ -1,0 +1,49 @@
+@mixin centeredItem {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+@mixin transitionEaseInOut {
+  transition: 0.5s ease-in-out;
+}
+
+@mixin bgSpecialTextWhite {
+  background-color: $colorSpecial;
+  color:$colorWhite;
+}
+
+@mixin bgImage {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin rotatingAnimation {
+  animation: rotating 10s linear infinite;
+  @keyframes rotating {
+    from {
+      transform:rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@mixin scaleAnimation {
+  animation: scaling 3s linear alternate infinite;
+  @keyframes scaling {
+    from {
+      transform: scale(80%);
+    }
+    to {
+      transform: scale(110%);
+    }
+  }
+}
+
+@mixin alignItemsCenterColumn {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
