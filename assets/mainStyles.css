@@ -943,6 +943,11 @@ footer .footerLine i {
   .circleIcons {
     width: 50%;
   }
+  .navbar-brand {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
 }
 @media (max-width: 768px) {
   .headerRotatingAnimation,
@@ -958,12 +963,20 @@ footer .footerLine i {
   header .headerRight .headerRotatingShape {
     width: 80%;
   }
+  .topBar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar .container {
+    justify-content: space-around;
+  }
   .dailyOffer .circleIcons i,
-  .ourTeam .circleIcons i,
+  .ourTeam .container .row:nth-child(1) .circleIcons i,
   .testimonials .circleIcons i,
   .blogs .circleIcons i {
     width: auto;
     height: auto;
+    font-size: smaller;
   }
   .dailyOffer h2,
   .foodMenu h2,
