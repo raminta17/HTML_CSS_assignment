@@ -163,6 +163,9 @@ img {
 			display: flex;
 			align-items: center;
 			border: 2px solid white;
+			background-color: white;
+			padding: 5px;
+			margin: auto;
 		}
 		.nav-item:hover {
 			border-bottom: 2px solid $colorSpecial;
@@ -173,6 +176,7 @@ img {
 		}
 
 		.circleIcons {
+			display: none;
 			i {
 				background-color: $colorLighterSpecial;
 				color: $colorBlack;
