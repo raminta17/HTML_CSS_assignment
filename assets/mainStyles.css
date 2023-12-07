@@ -974,8 +974,8 @@ footer .footerLine i {
   .ourTeam .container .row:nth-child(1) .circleIcons i,
   .testimonials .circleIcons i,
   .blogs .circleIcons i {
-    width: auto;
-    height: auto;
+    width: 30px;
+    height: 30px;
     font-size: smaller;
   }
   .dailyOffer h2,
