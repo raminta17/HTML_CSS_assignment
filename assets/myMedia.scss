@@ -1,50 +1,151 @@
-@media (max-width:576px) {
-  .navbar-brand, .circleIcons {
-    width: 50%;
-  }
-}
-@media  (max-width:768px) {
-  .headerRotatingAnimation, .headerScaleAnimation {
-    display: none;
-  }
-  .counterBox {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr;
-  }
+@import 'myVariables.scss';
 
+@media (max-width: 576px) {
+	.navbar-brand,
+	.circleIcons {
+		width: 50%;
+	}
 }
-@media (min-width:992px) {
-  .bgSpecial {
-    background-color: $colorSpecial;
-    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-  }
-  .counterBox {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+@media (max-width: 768px) {
+	.headerRotatingAnimation,
+	.headerScaleAnimation {
+		display: none;
+	}
+	header {
+		.headerRight {
+			.headerDiscountCircle {
+				font-size: 20px;
+				width: 100px;
+				height: 100px;
+				line-height: 10px;
+			}
+			.headerRotatingShape {
+				width: 80%;
+			}
+		}
+	}
+	.dailyOffer,
+	.ourTeam,
+	.testimonials,
+	.blogs {
+		.circleIcons i {
+			width: auto;
+			height: auto;
+		}
+	}
+	.dailyOffer,
+	.foodMenu,
+	.ourTeam,
+	.testimonials,
+	.offers,
+	.blogs {
+		h2 {
+			font-size: 20px;
+		}
+	}
+	.foodMenu {
+		.row:nth-child(2) {
+			div:nth-child(5),
+			div:nth-child(6),
+			div:nth-child(7),
+			div:nth-child(8) {
+				display: none;
+			}
+		}
+	}
+	.ourTeam {
+		.container .container {
+			width: auto;
+		}
+		.circleIcons {
+			width: auto;
+		}
+	}
+	.dailyOffer {
+		.dailyOfferDiscountCircle {
+			left: -20px;
+		}
+		.container:nth-child(2) {
+			width: auto;
+		}
+		p {
+			font-size: 12px;
+		}
+	}
+	.offers {
+		.col-7 {
+			width: 100%;
+		}
+	}
+	.testimonials {
+		.reviewCard {
+			.reviewImg {
+				width: 50%;
+			}
+		}
+		.container {
+			.container {
+				width: auto;
+			}
+		}
+		.leftQuote {
+			right: 190px;
+		}
+		.rightQuote {
+			left: 190px;
+		}
+	}
+	.foodMenu {
+		.menuOptionsButtons {
+			flex-wrap: wrap;
+			gap: 5px;
+		}
+		.row:nth-child(2) {
+			.col-6 {
+				width: 100%;
+			}
+		}
+	}
+	.sm-d-none {
+		display: none;
+	}
+	.counterBox {
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: 1fr;
+	}
+}
+@media (min-width: 992px) {
+	.bgSpecial {
+		background-color: $colorSpecial;
+		clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+	}
+	.counterBox {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
 
-    .counterBoxImage {
-      width: 200px;
-      height: 200px;
-    }
-    .counterBoxInfo {
-      width: 200px;
-      height: 200px;
-    }
-  }
-  .bookingContainer {
-    .booking {
-      clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%);
-      .formBox {
-        margin-left: 80px;
-      }
-    }
-  }
-  .foodMenu {
-    .menuOptionsButtons {
-      justify-content:end;
-    }
-  }
-  .downloadButtons {
-      flex-direction: column;
-  }
+		.counterBoxImage {
+			width: 200px;
+			height: 200px;
+		}
+		.counterBoxInfo {
+			width: 200px;
+			height: 200px;
+		}
+	}
+	.bookingContainer {
+		.booking {
+			clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%);
+			.formBox {
+				margin-left: 80px;
+			}
+		}
+	}
+	.foodMenu {
+		.menuOptionsButtons {
+			justify-content: end;
+		}
+	}
+	.downloadButtons {
+		flex-direction: column;
+	}
 }

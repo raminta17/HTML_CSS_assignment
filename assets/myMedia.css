@@ -1,0 +1,118 @@
+@media (max-width: 576px) {
+  .navbar-brand,
+  .circleIcons {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .headerRotatingAnimation,
+  .headerScaleAnimation {
+    display: none;
+  }
+  header .headerRight .headerDiscountCircle {
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    line-height: 10px;
+  }
+  header .headerRight .headerRotatingShape {
+    width: 80%;
+  }
+  .dailyOffer .circleIcons i,
+  .ourTeam .circleIcons i,
+  .testimonials .circleIcons i,
+  .blogs .circleIcons i {
+    width: auto;
+    height: auto;
+  }
+  .dailyOffer h2,
+  .foodMenu h2,
+  .ourTeam h2,
+  .testimonials h2,
+  .offers h2,
+  .blogs h2 {
+    font-size: 20px;
+  }
+  .foodMenu .row:nth-child(2) div:nth-child(5),
+  .foodMenu .row:nth-child(2) div:nth-child(6),
+  .foodMenu .row:nth-child(2) div:nth-child(7),
+  .foodMenu .row:nth-child(2) div:nth-child(8) {
+    display: none;
+  }
+  .ourTeam .container .container {
+    width: auto;
+  }
+  .ourTeam .circleIcons {
+    width: auto;
+  }
+  .dailyOffer .dailyOfferDiscountCircle {
+    left: -20px;
+  }
+  .dailyOffer .container:nth-child(2) {
+    width: auto;
+  }
+  .dailyOffer p {
+    font-size: 12px;
+  }
+  .offers .col-7 {
+    width: 100%;
+  }
+  .testimonials .reviewCard .reviewImg {
+    width: 50%;
+  }
+  .testimonials .container .container {
+    width: auto;
+  }
+  .testimonials .leftQuote {
+    right: 190px;
+  }
+  .testimonials .rightQuote {
+    left: 190px;
+  }
+  .foodMenu .menuOptionsButtons {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .foodMenu .row:nth-child(2) .col-6 {
+    width: 100%;
+  }
+  .sm-d-none {
+    display: none;
+  }
+  .counterBox {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .bgSpecial {
+    background-color: #ff7c08;
+    -webkit-clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  }
+  .counterBox {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .counterBox .counterBoxImage {
+    width: 200px;
+    height: 200px;
+  }
+  .counterBox .counterBoxInfo {
+    width: 200px;
+    height: 200px;
+  }
+  .bookingContainer .booking {
+    -webkit-clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .bookingContainer .booking .formBox {
+    margin-left: 80px;
+  }
+  .foodMenu .menuOptionsButtons {
+    justify-content: end;
+  }
+  .downloadButtons {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=myMedia.css.map */
